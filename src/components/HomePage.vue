@@ -18,7 +18,8 @@
        <div class="data"><span class="col1">Genres</span><span class="col2">Fusce/vehicula/dolor</span></div>
        <div class="data"><span class="col1">Author</span><span class="col2">Namae Shiranai</span></div>
        <div class="data"><span class="col1">Status</span><span class="col2">Ongoing</span></div>
-       <div class="data"><span class="col1">Rate</span><span class="col2">star*4</span></div>
+       <div class="data"><span class="col1">Rate</span><span class="col2"><font-awesome-icon icon="star" /><font-awesome-icon icon="star"/><font-awesome-icon icon="star"/><font-awesome-icon icon="star"/>
+</span></div>
       </div>
       <div class="summary">
         <div class="sumTitle">
@@ -50,8 +51,6 @@ Chapter 2: Todo List is Going Crazy! <span class="new">New</span>
 </template>
 
 <script>
-// <!-- https://hexschool.github.io/THE_F2E_Design/week5-comic%20viewer/assets/comic%20cover.png -->
-
 export default {
   data() {
     return {
@@ -64,17 +63,14 @@ export default {
 </script>
 
 <style lang='scss'>
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700i");
-$green: #50ff44;
-$black: #000000;
-$white: #ffffff;
-$_font: "Roboto", sans-serif;
+@import "../assets/scss/variables";
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   line-height: 1;
-  // outline: 1px solid #ff0000;
+  outline: 1px solid #ff0000;
   font-family: $_font;
 }
 
@@ -171,8 +167,14 @@ $_font: "Roboto", sans-serif;
         font-weight: bold;
         .chDetail {
           padding: 12px;
+          cursor: pointer;
+          &:hover {
+            background-color: $black;
+            color: $white;
+          }
           .new {
             background-color: $green;
+            color: $black;
           }
         }
       }
