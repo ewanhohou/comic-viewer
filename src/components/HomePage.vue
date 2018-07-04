@@ -70,7 +70,7 @@ export default {
   padding: 0;
   list-style: none;
   line-height: 1;
-  outline: 1px solid #ff0000;
+  // outline: 1px solid #ff0000;
   font-family: $_font;
 }
 

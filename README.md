@@ -2,6 +2,8 @@
 
 > The F2E week5 comic viewer
 
+https://ewanhohou.github.io/comic-viewer/
+
 ## Build Setup
 
 ``` bash
