@@ -1,52 +1,68 @@
 <template>
-<div class="wrap">
+  <div class="wrap">
 
-  <div class="header">
-    {{comicHeader}}
-  </div>
-
-  <div class="content">
-    <div class="item comicPic">
-      <img :src="comicImg">
+    <div class="header">
+      {{comicHeader}}
     </div>
-    <div class="item comicInfo">
-      <div class="title">
-        MY HEXSCHOOL
+
+    <div class="content">
+      <div class="item comicPic">
+        <img :src="comicImg">
       </div>
-      <div class="info">
-      <div class="detail">
-       <div class="data"><span class="col1">Genres</span><span class="col2">Fusce/vehicula/dolor</span></div>
-       <div class="data"><span class="col1">Author</span><span class="col2">Namae Shiranai</span></div>
-       <div class="data"><span class="col1">Status</span><span class="col2">Ongoing</span></div>
-       <div class="data"><span class="col1">Rate</span><span class="col2"><font-awesome-icon icon="star" /><font-awesome-icon icon="star"/><font-awesome-icon icon="star"/><font-awesome-icon icon="star"/>
-</span></div>
-      </div>
-      <div class="summary">
-        <div class="sumTitle">
-          Summary
+      <div class="item comicInfo">
+        <div class="title">
+          MY HEXSCHOOL
         </div>
-        <p class="sumContent">
-        If your banker breaks, you snap; if your apothecary by mistake sends you poison in your pills, you die.<br/><br/>
-        Therefore, I say, I saw that this situation of mine was the precise situation of every mortal that has this Siamese connexion with a plurality of other mortals.
-        </p>
+        <div class="info">
+          <div class="detail">
+            <div class="data">
+              <span class="col1">Genres</span>
+              <span class="col2">Fusce/vehicula/dolor</span>
+            </div>
+            <div class="data">
+              <span class="col1">Author</span>
+              <span class="col2">Namae Shiranai</span>
+            </div>
+            <div class="data">
+              <span class="col1">Status</span>
+              <span class="col2">Ongoing</span>
+            </div>
+            <div class="data">
+              <span class="col1">Rate</span>
+              <span class="col2">
+                <font-awesome-icon icon="star" />
+                <font-awesome-icon icon="star" />
+                <font-awesome-icon icon="star" />
+                <font-awesome-icon icon="star" />
+              </span>
+            </div>
+          </div>
+          <div class="summary">
+            <div class="sumTitle">
+              Summary
+            </div>
+            <p class="sumContent">
+              If your banker breaks, you snap; if your apothecary by mistake sends you poison in your pills, you die.<br/><br/> Therefore, I say, I saw that this situation of mine was the precise situation of every mortal that has this Siamese connexion with a plurality of other mortals.
+            </p>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
-  <div class="item chapters">
-    <div class="chTitle">
-      All Chapters
-    </div>
-    <div class="chContent">
-      <div class="chDetail">
-Chapter 1: The F2E Challenge Start!
-      </div>
-      <div class="chDetail">
-Chapter 2: Todo List is Going Crazy! <span class="new">New</span>
+      <div class="item chapters">
+        <div class="chTitle">
+          All Chapters
+        </div>
+        <div class="chContent">
+          <div class="chDetail">
+            Chapter 1: The F2E Challenge Start!
+          </div>
+          <div class="chDetail">
+            Chapter 2: Todo List is Going Crazy!
+            <span class="new">New</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  </div>
-</div>
 
 </template>
 
@@ -103,9 +119,11 @@ export default {
       width: 50%;
       img {
         border: black solid 5px;
-        width: 99%;
-        height: 600px;
+        width: auto;
+        height: auto;
         vertical-align: middle;
+        max-width: 100%;
+        max-height: 100%;
       }
     }
     .comicInfo {
@@ -176,6 +194,61 @@ export default {
             background-color: $green;
             color: $black;
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 767px) {
+  .wrap {
+    font-size: 12px;
+    .content {
+      .comicInfo {
+        width: 100%;
+        .info {
+          .detail {
+            margin-bottom: 5%;
+          }
+        }
+      }
+      .comicPic {
+        width: 100%;
+      }
+      .chapters {
+        .chTitle {
+          width: 33%;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .wrap {
+    font-size: 12px;
+    .content {
+      .comicInfo {
+        width: 100%;
+        .info {
+          padding: 20px;
+          font-size: 14px;
+          .detail {
+            margin-bottom: 2%;
+          }
+        }
+        .title {
+          font-size: 32px;
+        }
+      }
+      .comicPic {
+        width: 100%;
+      }
+      .chapters {
+        .chTitle {
+          font-size: 16px;
+          width: 40%;
+        }
+        .chContent {
+          font-size: 14px;
         }
       }
     }
